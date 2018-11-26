@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Capriola', sans-serif;
+}
+
+body {
+  background: $backgroundColor;
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+i {
+  width: 26px;
+}
+
+li {
+  font-family: 'Capriola', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover, a:active, a:link, a:visited {
+  text-decoration: none;
+}
+
+.control-label {
+  display: none;
+}

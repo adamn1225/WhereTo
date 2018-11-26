@@ -1,0 +1,21 @@
+<div class="col-md-12">
+<h3 class="vote-caption">Where to? Cast your vote below!</h3>
+  <%= form_with(model: [@poll, @poll_response]) do |form| %>
+    <% @poll.restaurants.each do |restaurant|%>
+      <div class="btn-group form-container" data-toggle="buttons">
+        <%= form.label(restaurant.name) do %>
+          <div class="venue-list">
+            <span class="poll-venue-name"><%= restaurant.name %></span>
+            <%= form.radio_button(:restaurant_id, restaurant.id, checked: false, class:"form-radio") %>
+          </div>
+        <% end %>
+      </div>
+      <hr class="vote-hr">
+    <% end %>
+    <div class="vote-submit">
+      <%= form.submit "Vote!", class: "btn btn-outline-secondary waves-effect vote-button" %>
+    </div>
+  <% end %>
+</div>
+
+

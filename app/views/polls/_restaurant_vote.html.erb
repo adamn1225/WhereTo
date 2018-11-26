@@ -1,0 +1,5 @@
+<%= form_tag(root_path, method: "post") do %>
+  <%= radio_button_tag(:restaurant, restaurant.id) %>
+  <%= label_tag(:restaurant, restaurant.name)%>
+<% end %>
+

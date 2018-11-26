@@ -1,0 +1,32 @@
+<%if current_user.admin? %>
+  <h1 class="buffer">Waiting for votes...</h1>
+  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  <%= image_tag 'WhereTo_Icon.svg', class:"logo-icon animated fadeIn" %>
+  <% if DateTime.now > @poll.end_time %>
+    <%= controller.redirect_to poll_orders_path(@poll) %>
+  <% end %>
+<% else %>
+  <% if @poll.closed? && @poll.winner %>
+  <span class="chart"><%= pie_chart @results, refresh: 10 %></span>
+    <h3 class="text-center winner"><%= @poll.winner.name %> is the winner!</h3>
+    <h4 class="text-center dish">What would you like to eat?</h4>
+
+    <%= form_with(model: [@poll, @order]) do |form| %>
+      <% @poll.winner.dishes.each do |dish|%>
+        <div class="btn-group dish-container" data-toggle="buttons"">
+          <%= form.label(dish.name) do %>
+            <div class="dish-list">
+              <span class="poll-venue-name"><%= dish.name %></span>
+              <%= form.radio_button(:dish_id, dish.id, checked: false, class:"form-radio") %>
+            </div>
+          <% end %>
+        </div>
+        <hr class="vote-hr">
+        </div>
+      <% end %>
+      <div class="vote-submit">
+        <%= form.submit "Order!", class: "btn btn-outline-secondary waves-effect vote-button" %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

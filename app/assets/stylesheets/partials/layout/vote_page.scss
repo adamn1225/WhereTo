@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+.buffer {
+  font-family: 'Capriola', sans-serif;
+  font-size: 6em;
+  text-align: center;
+  margin-top: 2em;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 4em;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(45deg, 
+                    black, 
+                    rgb(128, 21, 21),
+                    rgb(204, 35, 35),
+                    rgb(255, 255, 255));
+  animation: .8s shake infinite alternate;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }  
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 400px;
+  margin: auto;
+}
+
+.lds-ring div {
+  padding: 2em;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 51px;
+  height: 51px;
+  margin: 6px;
+  border: 10px solid #aa2727;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #aa2727 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.vote-caption {
+  font-family: 'Capriola', sans-serif;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.vote-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.vote-button {
+  font-family: 'Capriola', sans-serif;
+  width: 40%;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+
+.form-container {
+  margin-top: .25em;
+  width: 57.5%;
+  font-family: 'Capriola', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.venue-list {
+  vertical-align: baseline;
+  margin: 3em;
+}
+
+.poll-venue-name {
+  margin-right: 5em;
+}
+
+.form-radio
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #ff9999;
+  color: #ff9999;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  cursor: pointer;     
+  outline: none;
+}
+
+.form-radio:checked::before
+{
+  position: absolute;
+  font: 13px/1 'Open Sans', sans-serif;
+  left: 11px;
+  top: 7px;
+  content: '\02143';
+  transform: rotate(40deg);
+}
+
+.form-radio:hover
+{
+  background-color: #ffbdbd;
+}
+
+.form-radio:checked
+{
+  background-color: #aa2727;
+}
+
+.vote-hr {
+  height: 9px;
+  border-top: .5px solid #aa2727;
+  margin: auto;
+  width: 100%;
+}
+

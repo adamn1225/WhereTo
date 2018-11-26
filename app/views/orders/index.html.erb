@@ -1,0 +1,26 @@
+<h1 class="final-caption today-winner">Today's winner is <i class="icon-logo"><%= @poll.winner.name %></i></h1>
+<h1 class="final-caption phone-number">Call <i class="icon-logo"><%= @poll.winner.phone %></i> to place your order</h1>
+<h1 class="final-caption address">Pick it up at  <i class="icon-logo"><%= @poll.winner.address %>, <%= @poll.winner.city %> <%= @poll.winner.state %>, <%= @poll.winner.zip %></i></h1>
+
+<div class="ordered-items">
+  <ul class="item-list">
+    <p class="item-count">Item count<p>
+    <% @summary.each do |dish, order_count| %>
+    <div class="dish-spacing">
+      <%= dish %>: <i class="icon-logo"><%= order_count %></i>
+    </div>
+      <br />
+    <% end %>
+  </ul>
+
+
+  <ul class="item-list">
+    <p class="users-orders">Who ordered what</p>
+    <% @orders.each do |order| %>
+    <div class="dish-spacing">
+      <%= order.user.name %>'s order: <i class="icon-logo"><%= order.dish.name %></i>
+    </div>
+      <br />
+    <% end %>
+  </ul>
+</div>

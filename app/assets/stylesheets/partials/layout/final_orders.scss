@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+.today-winner {
+  margin-top: 3em;
+}
+
+.address {
+  margin-bottom: 2em;
+}
+
+.final-caption, .item-count, .users-orders, .item-list {
+  font-family: 'Capriola';
+  text-align: center;
+}
+
+.item-count, .users-orders {
+  font-family: 'Capriola';
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.ordered-items {
+  display: flex;
+  justify-content: center;
+}
+
+.item-list {
+  margin: 5em 2em;
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+
+.dish-spacing {
+  margin: -10px;
+}
+
+

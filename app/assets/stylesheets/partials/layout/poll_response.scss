@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+.chart {
+  margin-top: 2em;
+  width: 30%;
+  margin-left: 9em;
+  margin-bottom: -20em;
+}
+
+.winner, .dish {
+  font-family: 'Capriola', sans-serif;
+}
+
+.dish-list {
+  vertical-align: baseline;
+  margin: 2em;
+}
+
+.order-button {
+  width: 30%;
+}
+
+.dish-container {
+  margin-top: .25em;
+  width: 57.5%;
+  font-family: 'Capriola', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo-icon {
+  width: 8%;
+  margin-left: 120.5em;
+  margin-bottom: -1em;
+}
+
+
+@media screen and (max-width: 1480px) {
+  .chart {
+    display: none;
+  }
+  
+}
